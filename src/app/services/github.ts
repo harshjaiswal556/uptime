@@ -37,7 +37,6 @@ export class GithubService {
     );
   }
 
-  /** Optional: direct access to current user value */
   get currentUser() {
     return this.userSubject.value;
   }
