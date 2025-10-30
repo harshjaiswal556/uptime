@@ -1,0 +1,34 @@
+@if (user) {
+<div class="left-panel">
+  <div class="profile-section">
+    <img class="profile-image" [src]="user.avatar_url" alt="Profile" />
+    <h2 class="name">{{ user.name }}</h2>
+    <p class="username">{{ user.login }}</p>
+    <button matButton class="follow-btn">
+      Follow
+    </button>
+  </div>
+
+  @if (user.bio) {
+  <div class="bio">
+    <p>{{ user.bio }}</p>
+  </div>
+  }
+
+  <div class="followers">
+    <span class="count">{{ user.followers }}</span> followers ·
+    <span class="count">{{ user.following }}</span> following
+  </div>
+
+  <div class="info">
+    @for (item of getInfoList(user); track $index) {
+    <div class="info-item">
+      <mat-icon>{{ item.icon }}</mat-icon>
+      <a [href]="item.link" target="_blank" rel="noopener noreferrer">{{ item.text }}</a>
+    </div>
+    }
+  </div>
+</div>
+} @else {
+<div class="loading">Loading user data...</div>
+}

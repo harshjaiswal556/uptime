@@ -1,0 +1,31 @@
+<div class="main-section">
+  <app-sub-navbar [user]="user"></app-sub-navbar>
+
+  <div class="main-section-container">
+    <h2>Hello from {{ user.name }}</h2>
+
+    <div class="stats-card">
+      <img
+        [src]="
+          'https://github-readme-stats.vercel.app/api?username=' +
+          user.login +
+          '&show_icons=true&theme=tokyonight'
+        "
+        alt="GitHub Stats"
+        class="stats-image"
+      />
+    </div>
+    
+    <div class="heatmap-container">
+      <div class="heatmap">
+        @for (week of heatmapData; track $index) {
+          <div class="week">
+            @for (day of week; track $index) {
+              <div class="day" [ngStyle]="{ 'background-color': getColor(day) }"></div>
+            }
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

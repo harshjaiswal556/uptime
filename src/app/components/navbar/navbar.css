@@ -1,0 +1,162 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px 24px;
+  background-color: #161b22;
+  color: #ffffff;
+  border-bottom: 1px solid #30363d;
+  .github-logo{
+    height: 50px;
+    width: 50px;
+    color: #ffffff;
+  }
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  gap: 18px;
+  .nav-links-item{
+    display: flex;
+    align-items: center;
+    .mat-icon{
+      color: #c0c0c0;
+    }
+  }
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.nav-links .nav-links-item a:hover {
+  color: #c0c0c0;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 2px 8px;
+  width: 220px;
+  color: #8b949e;
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  flex: 1;
+  font-size: 13px;
+  padding: 4px;
+}
+
+.search-icon {
+  font-size: 14px;
+  margin-right: 4px;
+}
+
+.sign-in {
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  color: #ffffff !important;
+}
+
+.sign-in:hover {
+  color: #c0c0c0 !important;
+  cursor: pointer;
+}
+
+.mat-mdc-button .mat-mdc-button-persistent-ripple::before{
+  background-color: transparent;
+}
+
+.sign-up {
+  border: 1px solid #ffffff !important;
+  background: transparent;
+  color: #ffffff !important;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.sign-up:hover {
+  color: #c0c0c0 !important;
+  border-color: #c0c0c0 !important;
+}
+
+.menu-icon {
+  display: none;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .nav-links,
+  .search-box{
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .mobile-menu {
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mobile-search {
+    width: 92%;
+    display: flex;
+    align-items: center;
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 4px 8px;
+  }
+
+  .mobile-search input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    flex: 1;
+    font-size: 13px;
+  }
+}
+
